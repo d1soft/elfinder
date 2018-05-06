@@ -1,0 +1,42 @@
+{
+  "name": "d1soft/yii2-elfinder",
+  "description": "elFinder file manager for Yii 2",
+  "keywords": ["yii2", "widget", "elfinder", "file manager", "yii2-widgets", "yii2-framework"],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mark Ermolaev",
+      "email": "cloudma001@yandex.ru"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/d1soft/yii2-elfinder/issues",
+    "source": "https://github.com/d1soft/yii2-elfinder"
+  },
+  "require": {
+    "yiisoft/yii2-jui": "~2.0.0",
+    "studio-42/elfinder": "^2.1.37"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "d1soft\\elfinder\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.3.x-dev"
+    }
+  },
+  "config": {
+    "fxp-asset": {
+      "enabled": false
+    }
+  }
+}
