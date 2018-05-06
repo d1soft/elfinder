@@ -213,8 +213,8 @@ Bootstrap and jQuery UI buttons.
 ## Links
 
 * [elFinder Wiki](https://github.com/Studio-42/elFinder/wiki)
-* [CKEditor widget](https://github.com/d1soft/yii2-ckeditor) by [d1soft](https://github.com/d1soft)
-* [TinyMCE widget](https://github.com/d1soft/yii2-tinymce) by [d1soft](https://github.com/d1soft)
+* [CKEditor widget](https://github.com/alexantr/yii2-ckeditor) by [alexantr](https://github.com/alexantr)
+* [TinyMCE widget](https://github.com/alexantr/yii2-tinymce) by [alexantr](https://github.com/alexantr)
 * [CKEditor widget](https://github.com/2amigos/yii2-ckeditor-widget) by [2amigos](https://github.com/2amigos)
 * [TinyMCE widget](https://github.com/2amigos/yii2-tinymce-widget) by [2amigos](https://github.com/2amigos)
 * [Yii framework site](http://www.yiiframework.com)
