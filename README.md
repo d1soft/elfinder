@@ -1,19 +1,19 @@
 # elFinder file manager for Yii 2
 
 This extension integrates an [elFinder 2.1](http://studio-42.github.io/elFinder/) file manager into
-[Yii framework 2.0](http://www.yiiframework.com).
+[Yii framework 2.0](http://www.yiiframework.com). It is version with added editors src to Asset.
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/alexantr/yii2-elfinder.svg)](https://packagist.org/packages/alexantr/yii2-elfinder)
-[![Total Downloads](https://img.shields.io/packagist/dt/alexantr/yii2-elfinder.svg)](https://packagist.org/packages/alexantr/yii2-elfinder)
-[![License](https://img.shields.io/github/license/alexantr/yii2-elfinder.svg)](https://raw.githubusercontent.com/alexantr/yii2-elfinder/master/LICENSE)
-[![Build Status](https://travis-ci.org/alexantr/yii2-elfinder.svg?branch=master)](https://travis-ci.org/alexantr/yii2-elfinder)
+[![Latest Stable Version](https://img.shields.io/packagist/v/d1soft/yii2-elfinder.svg)](https://packagist.org/packages/d1soft/yii2-elfinder)
+[![Total Downloads](https://img.shields.io/packagist/dt/d1soft/yii2-elfinder.svg)](https://packagist.org/packages/d1soft/yii2-elfinder)
+[![License](https://img.shields.io/github/license/d1soft/yii2-elfinder.svg)](https://raw.githubusercontent.com/d1soft/yii2-elfinder/master/LICENSE)
+[![Build Status](https://travis-ci.org/d1soft/yii2-elfinder.svg?branch=master)](https://travis-ci.org/d1soft/yii2-elfinder)
 
 ## Installation
 
 Install extension through [composer](http://getcomposer.org/):
 
 ```
-composer require alexantr/yii2-elfinder
+composer require d1soft/yii2-elfinder
 ```
 
 ## Usage
@@ -28,10 +28,10 @@ For using elFinder you must create and configure controller. See complete exampl
 
 namespace app\controllers;
 
-use alexantr\elfinder\CKEditorAction;
-use alexantr\elfinder\ConnectorAction;
-use alexantr\elfinder\InputFileAction;
-use alexantr\elfinder\TinyMCEAction;
+use d1soft\elfinder\CKEditorAction;
+use d1soft\elfinder\ConnectorAction;
+use d1soft\elfinder\InputFileAction;
+use d1soft\elfinder\TinyMCEAction;
 use Yii;
 use yii\web\Controller;
 
@@ -85,7 +85,7 @@ connector options.
 Example of `InputFile` widget with enabled mime filter and preview:
 
 ```php
-<?= alexantr\elfinder\InputFile::widget([
+<?= d1soft\elfinder\InputFile::widget([
     'name' => 'attributeName',
     'clientRoute' => 'elfinder/input',
     'filter' => ['image'],
@@ -104,7 +104,7 @@ If you want to use the `InputFile` widget in `ActiveForm`, it can be done like t
 
 ```php
 <?= $form->field($model, 'attributeName')
-    ->widget(alexantr\elfinder\InputFile::className(), [
+    ->widget(d1soft\elfinder\InputFile::className(), [
         'clientRoute' => 'elfinder/input',
     ]) ?>
 ```
@@ -112,7 +112,7 @@ If you want to use the `InputFile` widget in `ActiveForm`, it can be done like t
 Using textarea instead text input (can be useful with enabled multiple selection):
 
 ```php
-<?= alexantr\elfinder\InputFile::widget([
+<?= d1soft\elfinder\InputFile::widget([
     'name' => 'attributeName',
     'clientRoute' => 'elfinder/input',
     'textarea' => true,
@@ -123,7 +123,7 @@ Using textarea instead text input (can be useful with enabled multiple selection
 Enable multiple selection to select more then one file in one input:
 
 ```php
-<?= alexantr\elfinder\InputFile::widget([
+<?= d1soft\elfinder\InputFile::widget([
     'name' => 'attributeName',
     'clientRoute' => 'elfinder/input',
     'multiple' => true,
@@ -154,11 +154,11 @@ class ElfinderController extends Controller
 
 ### Integration with CKEditor
 
-For using elFinder with CKEditor widget (like [this one](https://github.com/alexantr/yii2-ckeditor)) you need to
+For using elFinder with CKEditor widget (like [this one](https://github.com/d1soft/yii2-ckeditor)) you need to
 specify options `filebrowserBrowseUrl` and (or) `filebrowserImageBrowseUrl`:
 
 ```php
-<?= alexantr\ckeditor\CKEditor::widget([
+<?= d1soft\ckeditor\CKEditor::widget([
     'name' => 'attributeName',
     'clientOptions' => [
         // ...
@@ -172,15 +172,15 @@ specify options `filebrowserBrowseUrl` and (or) `filebrowserImageBrowseUrl`:
 
 ### Integration with TinyMCE 4
 
-For using elFinder with TinyMCE 4 widget (like [this one](https://github.com/alexantr/yii2-tinymce)) you need to
+For using elFinder with TinyMCE 4 widget (like [this one](https://github.com/d1soft/yii2-tinymce)) you need to
 specify option `file_picker_callback`:
 
 ```php
-<?= alexantr\tinymce\TinyMce::widget([
+<?= d1soft\tinymce\TinyMce::widget([
     'name' => 'attributeName',
     'clientOptions' => [
         // ...
-        'file_picker_callback' => alexantr\elfinder\TinyMCE::getFilePickerCallback(['elfinder/tinymce']),
+        'file_picker_callback' => d1soft\elfinder\TinyMCE::getFilePickerCallback(['elfinder/tinymce']),
     ],
 ]) ?>
 ```
@@ -198,7 +198,7 @@ TinyMCE::getFilePickerCallback(['elfinder/tinymce'], ['width' => 1200, 'height' 
 Add `ElFinder` widget to any view:
 
 ```php
-<?= alexantr\elfinder\ElFinder::widget([
+<?= d1soft\elfinder\ElFinder::widget([
     'connectorRoute' => ['elfinder/connector'],
     'settings' => [
         'height' => 640,
@@ -213,8 +213,8 @@ Bootstrap and jQuery UI buttons.
 ## Links
 
 * [elFinder Wiki](https://github.com/Studio-42/elFinder/wiki)
-* [CKEditor widget](https://github.com/alexantr/yii2-ckeditor) by [alexantr](https://github.com/alexantr)
-* [TinyMCE widget](https://github.com/alexantr/yii2-tinymce) by [alexantr](https://github.com/alexantr)
+* [CKEditor widget](https://github.com/d1soft/yii2-ckeditor) by [d1soft](https://github.com/d1soft)
+* [TinyMCE widget](https://github.com/d1soft/yii2-tinymce) by [d1soft](https://github.com/d1soft)
 * [CKEditor widget](https://github.com/2amigos/yii2-ckeditor-widget) by [2amigos](https://github.com/2amigos)
 * [TinyMCE widget](https://github.com/2amigos/yii2-tinymce-widget) by [2amigos](https://github.com/2amigos)
 * [Yii framework site](http://www.yiiframework.com)
